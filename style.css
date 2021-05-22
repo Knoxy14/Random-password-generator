@@ -8,15 +8,16 @@
     display: grid;
     height: 100%;
     /* place-items: center; */
-    background: royalblue;
+    /* background: royalblue; */
     /* text-align: center; */
+    background-image:url(https://i.pinimg.com/originals/7f/89/42/7f89421f894717c5a59647627884d4ff.gif);
   }
   .container{
     text-align: center;
     height: 300px;
-    margin-left: 1000px;
+    margin:0 auto;
     width: 450px;
-    background: rgb(0, 92, 121);
+    background: green;
     border: 1px solid rgb(190, 190, 190);
     border-radius: 5px;
     padding: 20px 25px;

@@ -1,3 +1,8 @@
+var capitalchkbox = document.getElementById("capital")
+var numberschkbox = document.getElementById("lowercase")
+var specialchkbox = document.getElementById("numbers")
+var lowerchkbox = document.getElementById("specialcharacters")
+
 const display = document.querySelector("input"),
 button = document.querySelector("button"),
 copyBtn = document.querySelector("span.far"),
@@ -20,4 +25,9 @@ function copy(){
     copyActive.style.display = "block";
     display.select();
     document.execCommand("copy");
+}
+
+function checkboxstate(){
+    
+
 }
