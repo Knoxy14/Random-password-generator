@@ -3,12 +3,15 @@ var numberschkbox = document.getElementById("lowercase")
 var specialchkbox = document.getElementById("numbers")
 var lowerchkbox = document.getElementById("specialcharacters")
 
+let checkboxes = [capitalchkbox, numberschkbox, specialchkbox, lowerchkbox];
+
 const display = document.querySelector("input"),
 button = document.querySelector("button"),
 copyBtn = document.querySelector("span.far"),
 copyActive = document.querySelector("span.fas");
 let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
 button.onclick = ()=>{
+    checkboxstates()
     let i,
     randomPassword = "";
     copyBtn.style.display = "block";
@@ -27,7 +30,7 @@ function copy(){
     document.execCommand("copy");
 }
 
-function checkboxstate(){
-    
+function checkboxstates(){
+    ()
 
 }
