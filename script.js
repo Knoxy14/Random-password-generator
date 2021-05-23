@@ -5,13 +5,26 @@ var lowerchkbox = document.getElementById("specialcharacters")
 
 let checkboxes = [capitalchkbox, numberschkbox, specialchkbox, lowerchkbox];
 
-const display = document.querySelector("input"),
+const display = document.querySelector("#password"),
 button = document.querySelector("button"),
 copyBtn = document.querySelector("span.far"),
 copyActive = document.querySelector("span.fas");
-let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+let capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let numbers = "0123456789";
+let special = "!@#$%^&*()_+~|}{[]:;?><,./-=";
+let lower = "abcdefghijklmnopqrstuvwxyz";
+
+let charactersets = [capital, numbers, special, lower];
+
 button.onclick = ()=>{
-    checkboxstates()
+    const checkboxresults = checkboxstates(checkboxes)
+    let chars = ""
+    for (j = 0; j < 4; j++) {
+        if (checkboxresults [j] === 1 ) {
+            chars += charactersets[j]
+        } 
+    }
     let i,
     randomPassword = "";
     copyBtn.style.display = "block";
@@ -30,7 +43,14 @@ function copy(){
     document.execCommand("copy");
 }
 
-function checkboxstates(){
-    ()
-
+function checkboxstates(checkboxarray){
+    //dom elements that are checked
+    let checkedboxes = []; 
+    //checks the checkbox value false or true
+    for (let i = 0; i < checkboxarray.length; i++) {
+        if (checkboxarray[i].checked === true) checkedboxes.push (1);
+         else checkedboxes.push (0);
+    }
+    //returning the dom elements 
+    return checkedboxes;
 }
